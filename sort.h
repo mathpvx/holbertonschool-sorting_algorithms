@@ -1,3 +1,5 @@
+/**size_t*/
+#include <stddef.h>
 /**
  * struct listint_s - Doubly linked list node
  * @n: Integer stored in the node

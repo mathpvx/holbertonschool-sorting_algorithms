@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 /**size_t*/
 #include <stddef.h>
 /**
@@ -8,9 +10,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 /**print functions prototypes*/
@@ -19,3 +21,4 @@ void print_array(const int *array, size_t size);
 
 /** other functions prototypes*/
 void bubble_sort(int *array, size_t size);
+#endif

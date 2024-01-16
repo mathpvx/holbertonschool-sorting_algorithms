@@ -7,6 +7,11 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp;
 
+	temp = malloc(sizeof(listint_t));
+
+	if (temp == NULL)
+		return;
+
 	while ((*list)->next != NULL)
 	{
 		while ((*list)->prev != NULL)
@@ -14,7 +19,6 @@ void insertion_sort_list(listint_t **list)
 			if ((*list)->n < (*list)->prev->n)
 			{
 				temp = *list;
-				temp->n = (*list)->n;
 				*list = (*list)->prev;
 				(*list)->prev = temp;
 				print_list(*list);
@@ -23,4 +27,5 @@ void insertion_sort_list(listint_t **list)
 		}
 		*list = (*list)->next;
 	}
+	free (temp);
 }

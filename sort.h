@@ -2,6 +2,7 @@
 #define MAIN_H
 /**size_t*/
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * struct listint_s - Doubly linked list node
  * @n: Integer stored in the node

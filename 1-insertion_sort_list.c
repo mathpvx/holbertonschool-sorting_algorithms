@@ -5,22 +5,28 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	int i;
 	listint_t *temp;
 
-	while (list->next != NULL)
+	temp = malloc(sizeof(listint_t));
+
+	if (temp == NULL)
+		return;
+
+	while ((*list)->next != NULL)
 	{
-		while (list->prev != NULL)
+		while ((*list)->prev != NULL)
 		{
-			if (list->n < list->prev->n)
+			if ((*list)->n < (*list)->prev->n)
 			{
-				*temp = list;
-				list = list->prev;
-				list->prev = *temp;
-				print_list(**list);
+				temp = *list;
+				*list = (*list)->prev;
+				(*list)->prev = temp;
+				print_list(*list);
 			}
-			list->prev = list->prev->prev;
+			(*list)->prev = (*list)->prev->prev;
 		}
-		list = list->next;
+		*list = (*list)->next;
 	}
+	
+	free (temp);
 }

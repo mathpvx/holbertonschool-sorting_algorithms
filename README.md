@@ -1,5 +1,3 @@
-Holberton's School .
-Julie Dedieu and Mathilde Pavaux
 # <p align="center">C - Sorting Algorithms & Big O project</p>
 
 ## Table of Contents

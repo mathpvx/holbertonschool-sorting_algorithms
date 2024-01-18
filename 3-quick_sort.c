@@ -10,7 +10,7 @@
  * Return: the pivot's position
  */
 
-static int partition(int *array, size_t size, int start, int end)
+int partition(int *array, size_t size, int start, int end)
 {
 	int pivot = array[end];
 	int i = (start - 1);
@@ -46,7 +46,7 @@ static int partition(int *array, size_t size, int start, int end)
  * Return: void
  */
 
-static void quick_sort_recursive(int *array, size_t size, int start, int end)
+void quick_sort_recursive(int *array, size_t size, int start, int end)
 {
 	int pivot_index;
 
